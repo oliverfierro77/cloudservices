@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>corp.sodimac</groupId>
+  	<artifactId>services</artifactId>
+  	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>services</name>
+	<description>services Spring Boot</description>
+
+	<!--prerequisites>
+        <maven>3.0.0</maven>
+    </prerequisites-->
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+	</parent>
+
+	<properties>
+		<java.version>1.9</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<!--exclusions>
+                <exclusion>
+                    <groupId>org.apache.tomcat</groupId>
+                    <artifactId>tomcat-jdbc</artifactId>
+                </exclusion>
+            </exclusions-->
+		</dependency>
+
+		<!-- Oracle JDBC driver -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>12.1.0</version>
+        </dependency>
+		
+		<dependency>
+        	<groupId>javax.xml.bind</groupId>
+        	<artifactId>jaxb-api</artifactId>
+        	<version>2.3.0</version>
+    	</dependency>
+		<!-- Spring Framework -->
+		<!--dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency-->
+		<!--dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</arti												factId>
+			<scope>test</scope>
+		</dependency-->
+		<!--dependency>
+			<groupId>org.springframework.restdocs</groupId>
+			<artifactId>spring-restdocs-mockmvc</artifactId>
+			<scope>test</scope>
+		</dependency-->
+		<!--dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-core</artifactId>
+    		<version>5.0.4.RELEASE</version>
+		</dependency-->
+		<!--dependency>
+    		<groupId>javax.transaction</groupId>
+    		<artifactId>javax.transaction-api</artifactId>
+    		<version>1.2</version>
+		</dependency-->
+		<!--dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>model</artifactId>
+            <version>5.0.4.RELEASE</version>
+        </dependency-->
+		<!--dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>5.0.4.RELEASE</version>
+        </dependency-->
+    	<!--dependency>
+      		<groupId>org.springframework</groupId>
+      		<artifactId>spring-context</artifactId>
+      		<version>4.3.7.RELEASE</version>
+    	</dependency-->
+		<!-- Jpa and hibernate -->
+		<!-- Spring ORM -->
+        <!--dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>4.3.7.RELEASE</version>
+        </dependency-->
+		<!-- Hibernate 5.2.9 Final -->
+    	<!--dependency>
+      		<groupId>org.hibernate</groupId>
+      		<artifactId>hibernate-core</artifactId>
+      		<version>5.2.9.Final</version>
+    	</dependency>
+		<dependency>
+    		<groupId>org.hibernate</groupId>
+    		<artifactId>hibernate-entitymanager</artifactId>
+    		<version>5.2.9.Final</version>
+		</dependency-->
+		<!--dependency>
+        	<groupId>org.hibernate.javax.persistence</groupId>
+        	<artifactId>hibernate-jpa-2.0-api</artifactId>
+        	<version>1.0.0.Final</version>
+    	</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.3.1.Final</version>
+			<type>jar</type>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.xml.bind</groupId>
+					<artifactId>jaxb-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.xml.bind</groupId>
+					<artifactId>jaxb-impl</artifactId>
+				</exclusion>
+			</exclusions>
+    	</dependency-->		
+
+		<!-- Swagger documentation-->
+		<dependency>
+    		<groupId>io.springfox</groupId>
+    		<artifactId>springfox-swagger2</artifactId>
+    		<version>2.6.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+    		<groupId>io.springfox</groupId>
+    		<artifactId>springfox-swagger-ui</artifactId>
+    		<version>2.6.1</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+      	<!--repository>
+        	<id>localrepository</id>
+        	<url>C:/POC/libs/ojdbc7-12.1.0.jar</url>
+      	</repository-->
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>
