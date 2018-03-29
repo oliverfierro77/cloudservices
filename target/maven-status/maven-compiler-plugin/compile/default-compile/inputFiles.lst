@@ -1,9 +1,9 @@
-C:\POC\services\src\main\java\corp\sodimac\service\IReservaDAO.java
+C:\POC\services\src\main\java\corp\sodimac\ReservaApplication.java
+C:\POC\services\src\main\java\corp\sodimac\SwaggerConfig.java
 C:\POC\services\src\main\java\corp\sodimac\service\IReservaService.java
-C:\POC\services\src\main\java\corp\sodimac\service\ReservaDAO.java
+C:\POC\services\src\main\java\corp\sodimac\controller\ReservaController.java
 C:\POC\services\src\main\java\corp\sodimac\ReservaClient.java
-C:\POC\services\src\main\java\corp\sodimac\service\SwaggerConfig.java
-C:\POC\services\src\main\java\corp\sodimac\service\Reserva.java
-C:\POC\services\src\main\java\corp\sodimac\service\ReservaController.java
-C:\POC\services\src\main\java\corp\sodimac\service\ReservaApplication.java
+C:\POC\services\src\main\java\corp\sodimac\dao\IReservaDAO.java
+C:\POC\services\src\main\java\corp\sodimac\entity\Reserva.java
+C:\POC\services\src\main\java\corp\sodimac\dao\ReservaDAO.java
 C:\POC\services\src\main\java\corp\sodimac\service\ReservaService.java

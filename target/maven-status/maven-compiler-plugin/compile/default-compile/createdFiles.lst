@@ -1,4 +1,9 @@
-corp\sodimac\service\SwaggerConfig.class
-corp\sodimac\service\IReservaDAO.class
-corp\sodimac\service\ReservaController.class
-corp\sodimac\service\ReservaDAO.class
+corp\sodimac\dao\ReservaDAO.class
+corp\sodimac\service\IReservaService.class
+corp\sodimac\entity\Reserva.class
+corp\sodimac\service\ReservaService.class
+corp\sodimac\controller\ReservaController.class
+corp\sodimac\ReservaApplication.class
+corp\sodimac\dao\IReservaDAO.class
+corp\sodimac\ReservaClient.class
+corp\sodimac\SwaggerConfig.class

@@ -7,7 +7,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-import corp.sodimac.service.Reserva;
+import corp.sodimac.entity.Reserva;
 
 public class ReservaClient {
 

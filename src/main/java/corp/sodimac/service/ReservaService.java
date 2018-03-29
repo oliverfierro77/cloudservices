@@ -3,8 +3,8 @@ package corp.sodimac.service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import corp.sodimac.service.IReservaDAO;
-import corp.sodimac.service.Reserva;
+import corp.sodimac.dao.IReservaDAO;
+import corp.sodimac.entity.Reserva;
 
 @Service
 public class ReservaService implements IReservaService {
@@ -12,18 +12,18 @@ public class ReservaService implements IReservaService {
     @Autowired
 	private IReservaDAO reservaDAO;
     
-    @Override
+    //@Override
 	public Reserva getReservaById(int reservaId) {
 		Reserva obj = reservaDAO.getReservaById(reservaId);
 		return obj;
 	}	
     
     //@Override
-	public List<Reserva> getAllReservas(){
-		return reservaDAO.getAllReservas();
+	public List<Reserva> getAllReservas(int page, int max){
+		return reservaDAO.getAllReservas(page, max);
 	}
-    
-    @Override
+	
+    //@Override
 	public synchronized boolean addReserva(Reserva reserva){
                 if (reservaDAO.reservaExists(reserva.getNumReserva())) {
     	            return false;
@@ -33,13 +33,19 @@ public class ReservaService implements IReservaService {
                 }
 	}
     
-    @Override
+    //@Override
 	public void updateReserva(Reserva reserva) {
 		reservaDAO.updateReserva(reserva);
 	}
     
-    @Override
+    //@Override
 	public void deleteReserva(int reservaId) {
 		reservaDAO.deleteReserva(reservaId);
 	}
+
+	//@Override
+	public boolean reservaExists(int numReserva){
+		return reservaDAO.reservaExists(numReserva);
+	}
+
 }
